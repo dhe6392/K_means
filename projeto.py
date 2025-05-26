@@ -19,7 +19,7 @@ centros = kmeans.cluster_centers_
 #--------calibra o modelo para garantir que 0 representa nao e 1 representa yes 
 df['Cluster'] = kmeans.labels_
 labels = kmeans.labels_ if (kmeans.labels_[Y.values == 1].mean() < 0.5) else 1 - kmeans.labels_
-# ...existing code...
+
 #--------resultados da precisao do modelo-----------------
 cr = classification_report(Y,labels)
 cmat = confusion_matrix(Y,labels)
